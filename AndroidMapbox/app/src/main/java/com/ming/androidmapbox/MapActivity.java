@@ -12,17 +12,16 @@ import com.mapbox.mapboxsdk.maps.OnMapReadyCallback;
 import com.mapbox.mapboxsdk.maps.Style;
 
 public class MapActivity extends AppCompatActivity {
-    private MapView mapView;
-    private MapboxMap mapboxMap;
-    private Style style;
+    public MapView mapView;
+    public MapboxMap mapboxMap;
+    public Style style;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         Mapbox.getInstance(this, getString(R.string.mapbox_access_token));
-
-        setContentView(R.layout.activity_map);
+        setContentView(getLayoutId());
 
         mapView = findViewById(R.id.mapView);
         mapView.onCreate(savedInstanceState);
@@ -40,6 +39,10 @@ public class MapActivity extends AppCompatActivity {
                 });
             }
         });
+    }
+
+    public int getLayoutId() {
+        return R.layout.activity_map;
     }
 
     public void onMapLoaded() {

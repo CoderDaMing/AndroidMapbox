@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        <com.mapbox.mapboxsdk.maps.MapView
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            mapbox:mapbox_cameraTargetLat="37.536172"
+            mapbox:mapbox_cameraTargetLng="126.916954"
+            mapbox:mapbox_cameraTilt="60"
+            mapbox:mapbox_cameraZoom="9"
+            />
+        <ImageView
+            android:id="@+id/iv_snapshot"
+            android:layout_width="160dp"
+            android:layout_height="200dp"
+            mapbox:layout_constraintBottom_toBottomOf="parent"
+            mapbox:layout_constraintStart_toStartOf="parent"/>
+
+        <Button
+            android:id="@+id/btn_old"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="截图Api旧"
+            android:layout_marginBottom="20dp"
+            mapbox:layout_constraintBottom_toTopOf="@+id/btn_new"
+            mapbox:layout_constraintEnd_toEndOf="parent" />
+        <Button
+            android:id="@+id/btn_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="截图Api新"
+            mapbox:layout_constraintBottom_toBottomOf="parent"
+            mapbox:layout_constraintEnd_toEndOf="parent" />
+        <Button
+            android:id="@+id/btn_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="清除截图"
+            android:layout_marginBottom="20dp"
+            mapbox:layout_constraintBottom_toTopOf="@+id/btn_old"
+            mapbox:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
