@@ -25,8 +25,9 @@ public class ReverseGeoActivity extends MapActivity {
 
 //＃过滤结果仅包含兴趣点
         String url2 = "https://api.mapbox.com/geocoding/v5/mapbox.places/-73.989,40.733.json?types=poi&access_token=您的访问令牌";
-
-        testReGeo(119, 39);
+        double latitude = mapboxMap.getCameraPosition().target.getLatitude();
+        double longitude = mapboxMap.getCameraPosition().target.getLongitude();
+        testReGeo(longitude, latitude);
     }
 
     public void testReGeo(double lng, double lat) {

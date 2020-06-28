@@ -10,7 +10,6 @@ import com.ming.androidmapbox.symbol.manager.ClusteringLayerManager;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 public class ClusterActivity extends MapActivity {
     private ClusteringLayerManager clusteringLayerManager;
@@ -28,9 +27,8 @@ public class ClusterActivity extends MapActivity {
 
     public void add(View view) {
         List<DemoObj> demoObjList = new ArrayList<>();
-        Random random = new Random();
-        int lat = random.nextInt(79);
-        int lng = random.nextInt(179);
+        double lat = mapboxMap.getCameraPosition().target.getLatitude();
+        double lng = mapboxMap.getCameraPosition().target.getLongitude();
         for (int i = 0; i < 100; i++) {
             DemoObj demoObj = new DemoObj("id" + i, lat + 0.001 * i, lng - 0.001 * i);
             demoObjList.add(demoObj);

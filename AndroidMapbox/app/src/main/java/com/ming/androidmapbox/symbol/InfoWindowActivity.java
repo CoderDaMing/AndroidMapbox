@@ -27,8 +27,8 @@ public class InfoWindowActivity extends MapActivity implements MapboxMap.OnMapCl
         List<InfoBean> infoBeanList = new ArrayList<>();
         for (int i = 0; i < 3; i++) {
             InfoBean infoBean = new InfoBean();
-            infoBean.setLongitude(-122.90480 + 0.001 * i);
-            infoBean.setLatitude(47.03676 + 0.001 * i);
+            infoBean.setLongitude(mapboxMap.getCameraPosition().target.getLongitude() + 0.001 * i);
+            infoBean.setLatitude(mapboxMap.getCameraPosition().target.getLatitude());
             infoBean.setName("testName" + i);
             infoBean.setCapital("testCapital" + i);
             infoBeanList.add(infoBean);

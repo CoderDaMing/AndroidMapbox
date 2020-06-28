@@ -37,6 +37,10 @@ public class SymbolLayerTwoActivity extends MapActivity implements View.OnClickL
     @Override
     public void onMapLoaded() {
         super.onMapLoaded();
+
+        latitude = mapboxMap.getCameraPosition().target.getLatitude();
+        longitude = mapboxMap.getCameraPosition().target.getLongitude();
+
         btn_add = findViewById(R.id.btn_add);
         btn_change = findViewById(R.id.btn_change);
         btn_delete = findViewById(R.id.btn_delete);

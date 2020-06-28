@@ -18,8 +18,12 @@ public class CustomMarkerOneActivity extends MapActivity {
     @Override
     public void onMapLoaded() {
         super.onMapLoaded();
+
+       double  latitude = mapboxMap.getCameraPosition().target.getLatitude();
+       double longitude = mapboxMap.getCameraPosition().target.getLongitude();
+
         testMarker = mapboxMap.addMarker(new MarkerOptions()
-                .position(new LatLng(39.13863, 116.57603))
+                .position(new LatLng(latitude, longitude))
                 .title("title")
                 .snippet("snippet"));
         moveMarker(testMarker, new LatLng(39.100, 116.500));
@@ -30,11 +34,10 @@ public class CustomMarkerOneActivity extends MapActivity {
             //1.api实现
             CameraPosition position = new CameraPosition.Builder()
                     .target(latLng) // Sets the new camera position
-                    .zoom(17) // Sets the zoom
                     .build(); // Creates a CameraPosition from the builder
 
             mapboxMap.animateCamera(CameraUpdateFactory
-                    .newCameraPosition(position), 2000);
+                    .newCameraPosition(position), 5000);
             //2.参考官方的动画移动marker实现
             animalMarker(testMarker, latLng);
         }
@@ -50,7 +53,7 @@ public class CustomMarkerOneActivity extends MapActivity {
         if (marker != null) {
             ValueAnimator markerAnimator = ObjectAnimator.ofObject(marker, "position",
                     new LatLngEvaluator(), marker.getPosition(), point);
-            markerAnimator.setDuration(2000);
+            markerAnimator.setDuration(5000);
             markerAnimator.start();
         }
     }

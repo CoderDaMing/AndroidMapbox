@@ -25,7 +25,7 @@ public class InfoWindowAdapterActivity extends MapActivity {
         mapboxMap.addMarker(new MarkerOptions()
                 .title("title")
                 .snippet("snippet")
-                .icon(IconFactory.getInstance(MyApplication.getInstance()).fromResource(R.drawable.mapbox_info_icon_default))
+                .icon(IconFactory.getInstance(MyApplication.getInstance()).fromResource(R.drawable.mapbox_logo_icon))
 //                .anchor(0.5f, 0.5f)
                 .position(new LatLng(39, 119)));
         mapboxMap.setInfoWindowAdapter(new CustomInfoWindowAdapter(this));

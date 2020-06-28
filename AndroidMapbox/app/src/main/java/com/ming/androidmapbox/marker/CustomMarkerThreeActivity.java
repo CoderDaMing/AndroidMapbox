@@ -10,7 +10,10 @@ public class CustomMarkerThreeActivity extends MapActivity {
     public void onMapLoaded() {
         super.onMapLoaded();
         Icon icon = IconFactory.getInstance(this).defaultMarker();
-        LatLng latlng = new LatLng(39, 119);
+        double  latitude = mapboxMap.getCameraPosition().target.getLatitude();
+        double longitude = mapboxMap.getCameraPosition().target.getLongitude();
+
+        LatLng latlng = new LatLng(latitude, longitude);
         CustomMarkerOptions markerOptions = new CustomMarkerOptions();
         markerOptions
                 .icon(icon)

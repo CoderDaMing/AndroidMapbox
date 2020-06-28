@@ -58,7 +58,7 @@ public class ClusteringLayerManager {
 
     private void initLayerIcons() {
         //添加图片
-        loadedMapStyle.addImage(CLUSTER_CIRCLE_ICON_ID, BitmapUtils.getBitmapFromDrawable(MyApplication.getInstance().getResources().getDrawable(android.R.drawable.ic_menu_more)));
+        loadedMapStyle.addImage(CLUSTER_CIRCLE_ICON_ID, BitmapUtils.getBitmapFromDrawable(MyApplication.getInstance().getResources().getDrawable(android.R.drawable.ic_delete)));
         loadedMapStyle.addImages(imageMap);
     }
 

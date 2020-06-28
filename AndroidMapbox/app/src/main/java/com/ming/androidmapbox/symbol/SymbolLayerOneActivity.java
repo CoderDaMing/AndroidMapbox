@@ -19,8 +19,8 @@ public class SymbolLayerOneActivity extends MapActivity  implements View.OnClick
     private Button btn_change;
     private Button btn_delete;
 
-    private double latitude = 39.9;
-    private double longitude = 119.6;
+    private double latitude;
+    private double longitude;
     private SingleSymbolLayer singleSymbolLayer;
 
     @Override
@@ -31,6 +31,10 @@ public class SymbolLayerOneActivity extends MapActivity  implements View.OnClick
     @Override
     public void onMapLoaded() {
         super.onMapLoaded();
+
+        latitude = mapboxMap.getCameraPosition().target.getLatitude();
+        longitude = mapboxMap.getCameraPosition().target.getLongitude();
+
         btn_add = findViewById(R.id.btn_add);
         btn_change = findViewById(R.id.btn_change);
         btn_delete = findViewById(R.id.btn_delete);

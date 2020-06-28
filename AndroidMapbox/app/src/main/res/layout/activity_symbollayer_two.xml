@@ -33,8 +33,11 @@
         android:text="清除标记" />
 
     <com.mapbox.mapboxsdk.maps.MapView
-        android:id="@+id/map_view"
+        android:id="@+id/mapView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        mapbox:mapbox_cameraTargetLat="-36.84"
+        mapbox:mapbox_cameraTargetLng="174.76"
+        mapbox:mapbox_cameraZoom="10" />
 </FrameLayout>
 
