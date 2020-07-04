@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 
 import com.ming.androidmapbox.MapActivity;
 import com.ming.androidmapbox.R;
+import com.ming.androidmapbox.ToastUtil;
 
 import java.io.IOException;
 import java.util.Locale;
@@ -46,13 +47,14 @@ public class ReverseGeoActivity extends MapActivity {
 
             @Override
             public void onFailure(@NonNull Call call, @NonNull IOException e) {
-                Log.d("testMapQuest", "==>返回结果：onFailure " + e.getMessage());
+                ToastUtil.show("testMapQuest onFailure: " + e.getMessage());
             }
 
             @Override
             public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
                 String json = response.body().string();
                 Log.d("testMapQuest", "==>返回结果：onResponse " + json);
+                ToastUtil.show("testMapQuest onResponse: \n"  + json);
             }
         });
     }

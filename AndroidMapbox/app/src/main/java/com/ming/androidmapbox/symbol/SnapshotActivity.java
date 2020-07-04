@@ -6,7 +6,6 @@ import android.graphics.drawable.ColorDrawable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
@@ -22,6 +21,7 @@ import com.mapbox.mapboxsdk.style.layers.SymbolLayer;
 import com.mapbox.mapboxsdk.style.sources.GeoJsonSource;
 import com.ming.androidmapbox.MapActivity;
 import com.ming.androidmapbox.R;
+import com.ming.androidmapbox.ToastUtil;
 
 import static com.mapbox.mapboxsdk.style.layers.PropertyFactory.iconAllowOverlap;
 import static com.mapbox.mapboxsdk.style.layers.PropertyFactory.iconAnchor;
@@ -76,7 +76,7 @@ public class SnapshotActivity extends MapActivity {
             public void onClick(View v) {
                 if (!hasStartedSnapshotGeneration) {
                     hasStartedSnapshotGeneration = true;
-                    Toast.makeText(SnapshotActivity.this, "loading old api...", Toast.LENGTH_LONG).show();
+                    ToastUtil.show("loading old api...");
                     startOldSnapShot();
                 }
             }
@@ -87,7 +87,7 @@ public class SnapshotActivity extends MapActivity {
             public void onClick(View view) {
                 if (!hasStartedSnapshotGeneration) {
                     hasStartedSnapshotGeneration = true;
-                    Toast.makeText(SnapshotActivity.this, "loading new api...", Toast.LENGTH_LONG).show();
+                    ToastUtil.show("loading new api...");
                     startNewSnapShot(
                             mapboxMap.getProjection().getVisibleRegion().latLngBounds,
                             mapView.getMeasuredHeight(),

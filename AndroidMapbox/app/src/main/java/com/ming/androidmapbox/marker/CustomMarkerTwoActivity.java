@@ -1,6 +1,9 @@
 package com.ming.androidmapbox.marker;
 
+import com.mapbox.mapboxsdk.geometry.LatLng;
 import com.ming.androidmapbox.MapActivity;
+import com.ming.androidmapbox.MyApplication;
+import com.ming.androidmapbox.ToastUtil;
 
 /**
  * MarkerView已过时被mapbox在高版本删除（5.1.3左右存在 ）
@@ -9,15 +12,14 @@ public class CustomMarkerTwoActivity extends MapActivity {
     @Override
     public void onMapLoaded() {
         super.onMapLoaded();
+        ToastUtil.show("MarkerView已过时被mapbox在高版本删除（5.1.3左右存在 ）");
 //        //设置管理MarkerView
 //        MarkerViewManager markerViewManager = mapboxMap.getMarkerViewManager();
 //        MyMarkerViewAdapter markerViewAdapter = new MyMarkerViewAdapter(MyApplication.getInstance();
 //        markerViewManager.addMarkerViewAdapter(markerViewAdapter);
 //
 //        MyMarkerViewOptions overlayOptions = new MyMarkerViewOptions();
-//        double nLatitude = 39.99;
-//        double nLongitude = 111.11;
-//        overlayOptions.position(new LatLng(nLatitude, nLongitude));
+//        overlayOptions.position(mapboxMap.getCameraPosition().target);
 //        MyMarkerView testMarker = (MyMarkerView) mapboxMap.addMarker(overlayOptions);
 //
 //        mapBoxMap.selectMarker(testMarker);//设置marker被选中状态放大

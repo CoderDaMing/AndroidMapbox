@@ -12,7 +12,6 @@ import androidx.annotation.Nullable;
 import com.mapbox.mapboxsdk.annotations.IconFactory;
 import com.mapbox.mapboxsdk.annotations.Marker;
 import com.mapbox.mapboxsdk.annotations.MarkerOptions;
-import com.mapbox.mapboxsdk.geometry.LatLng;
 import com.mapbox.mapboxsdk.maps.MapboxMap;
 import com.ming.androidmapbox.MapActivity;
 import com.ming.androidmapbox.MyApplication;
@@ -23,11 +22,10 @@ public class InfoWindowAdapterActivity extends MapActivity {
     public void onMapLoaded() {
         super.onMapLoaded();
         mapboxMap.addMarker(new MarkerOptions()
-                .title("title")
-                .snippet("snippet")
-                .icon(IconFactory.getInstance(MyApplication.getInstance()).fromResource(R.drawable.mapbox_logo_icon))
-//                .anchor(0.5f, 0.5f)
-                .position(new LatLng(39, 119)));
+                .title("title 不生效")
+                .snippet("snippet 不生效")
+                .icon(IconFactory.getInstance(MyApplication.getInstance()).defaultMarker())
+                .position(mapboxMap.getCameraPosition().target));
         mapboxMap.setInfoWindowAdapter(new CustomInfoWindowAdapter(this));
     }
 

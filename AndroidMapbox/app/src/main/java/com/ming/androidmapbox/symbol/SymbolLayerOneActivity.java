@@ -2,7 +2,6 @@ package com.ming.androidmapbox.symbol;
 
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.mapbox.mapboxsdk.camera.CameraPosition;
 import com.mapbox.mapboxsdk.camera.CameraUpdate;
@@ -10,6 +9,7 @@ import com.mapbox.mapboxsdk.camera.CameraUpdateFactory;
 import com.mapbox.mapboxsdk.geometry.LatLng;
 import com.ming.androidmapbox.MapActivity;
 import com.ming.androidmapbox.R;
+import com.ming.androidmapbox.ToastUtil;
 import com.ming.androidmapbox.symbol.manager.SingleSymbolLayer;
 
 import java.util.Random;
@@ -39,7 +39,7 @@ public class SymbolLayerOneActivity extends MapActivity  implements View.OnClick
         btn_change = findViewById(R.id.btn_change);
         btn_delete = findViewById(R.id.btn_delete);
 
-        Toast.makeText(this, "地图初始化完毕", Toast.LENGTH_SHORT).show();
+        ToastUtil.show("地图初始化完毕");
         //添加监听
         btn_add.setOnClickListener(this);
         btn_change.setOnClickListener(this);

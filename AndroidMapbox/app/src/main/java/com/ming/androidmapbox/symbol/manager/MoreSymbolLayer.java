@@ -4,7 +4,6 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.PointF;
-import android.widget.Toast;
 
 import com.google.gson.JsonElement;
 import com.mapbox.geojson.Feature;
@@ -16,6 +15,7 @@ import com.mapbox.mapboxsdk.maps.Style;
 import com.mapbox.mapboxsdk.style.layers.SymbolLayer;
 import com.mapbox.mapboxsdk.style.sources.GeoJsonSource;
 import com.ming.androidmapbox.R;
+import com.ming.androidmapbox.ToastUtil;
 import com.ming.androidmapbox.symbol.bean.CustomBean;
 
 import java.util.ArrayList;
@@ -132,7 +132,7 @@ public class MoreSymbolLayer {
                 Feature feature = featureList.get(0);
                 JsonElement featureProperty = feature.getProperty(MORE_PROPERTY_ID);
                 String customId = featureProperty.getAsString();
-                Toast.makeText(mContext, "点到了SymbolLayer Id:" + customId, Toast.LENGTH_SHORT).show();
+                ToastUtil.show("点到了SymbolLayer Id:" + customId);
                 return true;
             }
         } catch (Exception e) {

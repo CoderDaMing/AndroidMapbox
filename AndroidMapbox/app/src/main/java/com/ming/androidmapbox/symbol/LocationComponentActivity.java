@@ -3,9 +3,13 @@ package com.ming.androidmapbox.symbol;
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
+import android.location.Location;
+import android.location.LocationManager;
 
 import androidx.core.content.ContextCompat;
 
+import com.mapbox.mapboxsdk.camera.CameraPosition;
+import com.mapbox.mapboxsdk.geometry.LatLng;
 import com.mapbox.mapboxsdk.location.LocationComponent;
 import com.mapbox.mapboxsdk.location.LocationComponentActivationOptions;
 import com.mapbox.mapboxsdk.location.LocationComponentOptions;
@@ -15,6 +19,7 @@ import com.mapbox.mapboxsdk.maps.MapboxMap;
 import com.mapbox.mapboxsdk.maps.Style;
 import com.ming.androidmapbox.MapActivity;
 import com.ming.androidmapbox.R;
+import com.ming.androidmapbox.ToastUtil;
 
 public class LocationComponentActivity extends MapActivity {
     @Override
@@ -64,6 +69,14 @@ public class LocationComponentActivity extends MapActivity {
              *
              */
             locationComponent.setRenderMode(RenderMode.COMPASS);
+            //  强制设定位置
+            LatLng target = mapboxMap.getCameraPosition().target;
+            Location location = new Location(LocationManager.GPS_PROVIDER);
+            location.setLatitude(target.getLatitude());
+            location.setLongitude(target.getLongitude());
+            locationComponent.forceLocationUpdate(location);
+        }else {
+            ToastUtil.show("没有位置权限");
         }
     }
 }

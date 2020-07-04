@@ -5,7 +5,8 @@ import com.mapbox.mapboxsdk.annotations.Icon;
 import com.mapbox.mapboxsdk.annotations.Marker;
 
 public class CustomMarker extends Marker {
-    Icon iconBig;
+    private Icon iconBig;
+    private Object tag;
 
     /**
      * Creates a instance of {@link Marker} using the builder of Marker.
@@ -22,5 +23,13 @@ public class CustomMarker extends Marker {
 
     public void setIconBig(Icon iconBig) {
         this.iconBig = iconBig;
+    }
+
+    public Object getTag() {
+        return tag;
+    }
+
+    public void setTag(Object tag) {
+        this.tag = tag;
     }
 }

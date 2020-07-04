@@ -3,7 +3,6 @@ package com.ming.androidmapbox.symbol;
 import android.graphics.BitmapFactory;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
@@ -14,6 +13,7 @@ import com.mapbox.mapboxsdk.geometry.LatLng;
 import com.mapbox.mapboxsdk.maps.MapboxMap;
 import com.ming.androidmapbox.MapActivity;
 import com.ming.androidmapbox.R;
+import com.ming.androidmapbox.ToastUtil;
 import com.ming.androidmapbox.symbol.bean.CustomBean;
 import com.ming.androidmapbox.symbol.manager.MoreSymbolLayer;
 
@@ -44,7 +44,7 @@ public class SymbolLayerTwoActivity extends MapActivity implements View.OnClickL
         btn_add = findViewById(R.id.btn_add);
         btn_change = findViewById(R.id.btn_change);
         btn_delete = findViewById(R.id.btn_delete);
-        Toast.makeText(this, "地图初始化完毕", Toast.LENGTH_SHORT).show();
+        ToastUtil.show("地图初始化完毕");
         moreSymbolLayer = new MoreSymbolLayer(this, mapboxMap, style);
         //添加地图点击监听
         mapboxMap.addOnMapClickListener(new MapboxMap.OnMapClickListener() {

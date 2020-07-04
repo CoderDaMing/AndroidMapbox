@@ -19,14 +19,11 @@ public class CustomMarkerOneActivity extends MapActivity {
     public void onMapLoaded() {
         super.onMapLoaded();
 
-       double  latitude = mapboxMap.getCameraPosition().target.getLatitude();
-       double longitude = mapboxMap.getCameraPosition().target.getLongitude();
-
         testMarker = mapboxMap.addMarker(new MarkerOptions()
-                .position(new LatLng(latitude, longitude))
+                .position(mapboxMap.getCameraPosition().target)
                 .title("title")
                 .snippet("snippet"));
-        moveMarker(testMarker, new LatLng(39.100, 116.500));
+        moveMarker(testMarker, new LatLng(0, 0));
     }
 
     private void moveMarker(Marker testMarker, LatLng latLng) {
