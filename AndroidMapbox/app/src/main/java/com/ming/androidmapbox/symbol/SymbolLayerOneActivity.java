@@ -76,6 +76,8 @@ public class SymbolLayerOneActivity extends MapActivity  implements View.OnClick
                     double changeLongitude = latitude + randomValue;
 
                     singleSymbolLayer.updatePosition(latitude, changeLongitude);
+
+                    mapboxMap.animateCamera(CameraUpdateFactory.newLatLng(new LatLng(latitude, changeLongitude)));
                 }
                 break;
 

@@ -11,6 +11,7 @@ import com.mapbox.android.gestures.StandardScaleGestureDetector;
 import com.mapbox.mapboxsdk.geometry.LatLng;
 import com.mapbox.mapboxsdk.maps.MapboxMap;
 import com.ming.androidmapbox.MapActivity;
+import com.ming.androidmapbox.util.ToastUtil;
 
 public class MapListenerActivity extends MapActivity {
     private static final String TAG = "MapListenerActivity ";
@@ -166,6 +167,8 @@ public class MapListenerActivity extends MapActivity {
         mapboxMap.addOnCameraMoveListener(myOnCameraMoveListener);
         mapboxMap.addOnCameraMoveCancelListener(myOnCameraMoveListener);
         mapboxMap.addOnCameraIdleListener(myOnCameraMoveListener);
+
+        ToastUtil.show("请查看log");
     }
 
     @Override

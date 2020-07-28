@@ -31,6 +31,7 @@ import com.mapbox.mapboxsdk.style.sources.GeoJsonSource;
 import com.mapbox.mapboxsdk.style.sources.Source;
 import com.ming.androidmapbox.MapActivity;
 import com.ming.androidmapbox.R;
+import com.ming.androidmapbox.util.ToastUtil;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -74,8 +75,8 @@ public class CameraPositionActivity extends MapActivity implements View.OnClickL
             .include(locationTwo) // Southwest
             .build();
     //RestrictMapPanning
-    private static final LatLng BOUND_CORNER_NW = new LatLng(-8.491377105132457, 108.26584125231903);
-    private static final LatLng BOUND_CORNER_SE = new LatLng(-42.73740968175186, 158.19629538046348);
+    private static final LatLng BOUND_CORNER_NW = new LatLng(34.532128, -98.489121);
+    private static final LatLng BOUND_CORNER_SE = new LatLng(32.837058, -100.646234);
     private static final LatLngBounds RESTRICTED_BOUNDS_AREA = new LatLngBounds.Builder()
             .include(BOUND_CORNER_NW)
             .include(BOUND_CORNER_SE)
@@ -182,7 +183,7 @@ public class CameraPositionActivity extends MapActivity implements View.OnClickL
                  *                           如果动画由于后来的相机移动或用户手势中断而停止播放，则将调用onCancel（）。
                  *                           不要在onCancel（）中更新或缓和相机。
                  */
-                mapboxMap.easeCamera(CameraUpdateFactory.newCameraPosition(easeCameraPosition), 7000, true, new MapboxMap.CancelableCallback() {
+                mapboxMap.easeCamera(CameraUpdateFactory.newCameraPosition(easeCameraPosition), 5000, true, new MapboxMap.CancelableCallback() {
                     @Override
                     public void onCancel() {
                         Toast.makeText(CameraPositionActivity.this, "easeCamera onCancel()", Toast.LENGTH_SHORT).show();
@@ -244,7 +245,7 @@ public class CameraPositionActivity extends MapActivity implements View.OnClickL
                  *                   不要在onCancel（）中更新或设置摄像机动画。如果不需要回调，请将其保留为null。
                  * @see com.mapbox.mapboxsdk.camera.CameraUpdateFactory for a set of updates.
                  */
-                mapboxMap.animateCamera(CameraUpdateFactory.newCameraPosition(animateCameraPosition), 7000, new MapboxMap.CancelableCallback() {
+                mapboxMap.animateCamera(CameraUpdateFactory.newCameraPosition(animateCameraPosition), 5000, new MapboxMap.CancelableCallback() {
                     @Override
                     public void onCancel() {
                         Toast.makeText(CameraPositionActivity.this, "animateCamera onCancel()", Toast.LENGTH_SHORT).show();
@@ -259,6 +260,7 @@ public class CameraPositionActivity extends MapActivity implements View.OnClickL
             case R.id.btn_FitCameraInBoundingBox:
                 mapboxMap.easeCamera(CameraUpdateFactory.newLatLngBounds(latLngBounds, 50), 5000);
                 addMarkerIconsToMap(style);
+                ToastUtil.show("2个标记所在位置就是我们所设置显示区域边界");
                 break;
             case R.id.btn_RestrictMapPanning:
                 // 设置地图相机的边界区域

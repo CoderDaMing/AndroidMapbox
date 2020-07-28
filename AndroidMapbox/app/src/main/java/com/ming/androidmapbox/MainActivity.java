@@ -29,6 +29,7 @@ import com.ming.androidmapbox.marker.CustomMarkerOneActivity;
 import com.ming.androidmapbox.marker.CustomMarkerThreeActivity;
 import com.ming.androidmapbox.marker.CustomMarkerTwoActivity;
 import com.ming.androidmapbox.marker.InfoWindowAdapterActivity;
+import com.ming.androidmapbox.root.CameraPositionActivity;
 import com.ming.androidmapbox.root.MapListenerActivity;
 import com.ming.androidmapbox.root.StyleActivity;
 import com.ming.androidmapbox.root.UiSettingActivity;
@@ -85,7 +86,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         mActivityDataList.add(new ActivityData("*************root包下*************", ""));
 
-        mActivityDataList.add(new ActivityData("CameraPosition", CameraPosition.class.getName()));
+        mActivityDataList.add(new ActivityData("CameraPositionActivity", CameraPositionActivity.class.getName()));
         mActivityDataList.add(new ActivityData("MapListenerActivity", MapListenerActivity.class.getName()));
         mActivityDataList.add(new ActivityData("StyleActivity", StyleActivity.class.getName()));
         mActivityDataList.add(new ActivityData("UiSettingActivity", UiSettingActivity.class.getName()));
