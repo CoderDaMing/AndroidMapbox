@@ -1,4 +1,4 @@
-package com.ming.androidmapbox;
+package com.ming.androidmapbox.util;
 
 import android.util.Log;
 

@@ -45,5 +45,7 @@ dependencies {
     implementation 'androidx.multidex:multidex:2.0.1'
     //mapboxsdk
     implementation 'com.mapbox.mapboxsdk:mapbox-android-sdk:9.2.0'
+    //recyclerview
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
 
 }

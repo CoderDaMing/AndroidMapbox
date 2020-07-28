@@ -9,7 +9,7 @@ import com.mapbox.mapboxsdk.camera.CameraUpdateFactory;
 import com.mapbox.mapboxsdk.geometry.LatLng;
 import com.ming.androidmapbox.MapActivity;
 import com.ming.androidmapbox.R;
-import com.ming.androidmapbox.ToastUtil;
+import com.ming.androidmapbox.util.ToastUtil;
 import com.ming.androidmapbox.symbol.manager.SingleSymbolLayer;
 
 import java.util.Random;

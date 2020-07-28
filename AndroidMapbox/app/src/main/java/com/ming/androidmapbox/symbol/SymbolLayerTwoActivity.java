@@ -13,7 +13,7 @@ import com.mapbox.mapboxsdk.geometry.LatLng;
 import com.mapbox.mapboxsdk.maps.MapboxMap;
 import com.ming.androidmapbox.MapActivity;
 import com.ming.androidmapbox.R;
-import com.ming.androidmapbox.ToastUtil;
+import com.ming.androidmapbox.util.ToastUtil;
 import com.ming.androidmapbox.symbol.bean.CustomBean;
 import com.ming.androidmapbox.symbol.manager.MoreSymbolLayer;
 

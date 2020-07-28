@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".layers.MarkerFollowingRouteActivity">
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        mapbox:mapbox_cameraTargetLat="38.875"
+        mapbox:mapbox_cameraTargetLng="-77.035"
+        mapbox:mapbox_cameraZoom="13">
+
+        <Button
+            android:id="@+id/btn_route"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="标记沿路线行驶" />
+
+        <Button
+            android:id="@+id/btn_route_follow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="标记沿路线跟随" />
+    </com.mapbox.mapboxsdk.maps.MapView>
+
+</FrameLayout>

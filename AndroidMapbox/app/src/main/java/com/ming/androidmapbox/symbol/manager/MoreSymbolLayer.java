@@ -15,7 +15,7 @@ import com.mapbox.mapboxsdk.maps.Style;
 import com.mapbox.mapboxsdk.style.layers.SymbolLayer;
 import com.mapbox.mapboxsdk.style.sources.GeoJsonSource;
 import com.ming.androidmapbox.R;
-import com.ming.androidmapbox.ToastUtil;
+import com.ming.androidmapbox.util.ToastUtil;
 import com.ming.androidmapbox.symbol.bean.CustomBean;
 
 import java.util.ArrayList;

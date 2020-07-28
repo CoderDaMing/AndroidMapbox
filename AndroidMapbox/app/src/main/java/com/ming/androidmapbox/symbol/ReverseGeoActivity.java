@@ -6,7 +6,7 @@ import androidx.annotation.NonNull;
 
 import com.ming.androidmapbox.MapActivity;
 import com.ming.androidmapbox.R;
-import com.ming.androidmapbox.ToastUtil;
+import com.ming.androidmapbox.util.ToastUtil;
 
 import java.io.IOException;
 import java.util.Locale;

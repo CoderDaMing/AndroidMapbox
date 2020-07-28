@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".layers.SymbolLayerActivity">
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        mapbox:mapbox_cameraTargetLat="38.875"
+        mapbox:mapbox_cameraTargetLng="-77.035"
+        mapbox:mapbox_cameraZoom="13">
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="bottom">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:text="动态更新：" />
+
+                <Button
+                    android:id="@+id/btn_size_animation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="size动画" />
+                <Button
+                    android:id="@+id/btn_position_animation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="位置动画" />
+            </LinearLayout>
+        </HorizontalScrollView>
+    </com.mapbox.mapboxsdk.maps.MapView>
+</androidx.constraintlayout.widget.ConstraintLayout>

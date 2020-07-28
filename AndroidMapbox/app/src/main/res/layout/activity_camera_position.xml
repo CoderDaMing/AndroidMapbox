@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/activity_map" />
+
+    <TextView
+        android:id="@+id/tv_zoom_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="zoom目前支持 0.0f - 25.5f"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_min_zoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="显示地图的最小缩放级别"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_zoom_des" />
+
+    <EditText
+        android:id="@+id/et_max_zoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="显示地图的最大缩放级别"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_min_zoom" />
+
+    <Button
+        android:id="@+id/btn_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="更新设置"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_max_zoom" />
+
+    <TextView
+        android:id="@+id/tv_currentCameraPosition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_update" />
+
+    <HorizontalScrollView
+        android:id="@+id/hs_camera_latLng"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="10dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/hs_camera_latLngBounds"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_easeCamera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="easeCamera"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_moveCamera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="moveCamera"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_animateCamera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="animateCamera"
+                android:textAllCaps="false" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <HorizontalScrollView
+        android:id="@+id/hs_camera_latLngBounds"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="10dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_FitCameraInBoundingBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="将相机放入边框"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_RestrictMapPanning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="限制地图平移"
+                android:textAllCaps="false" />
+        </LinearLayout>
+    </HorizontalScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

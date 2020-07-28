@@ -1,8 +1,10 @@
-package com.ming.androidmapbox;
+package com.ming.androidmapbox.util;
 
 import android.os.Handler;
 import android.os.Looper;
 import android.widget.Toast;
+
+import com.ming.androidmapbox.MyApplication;
 
 
 public class ToastUtil {

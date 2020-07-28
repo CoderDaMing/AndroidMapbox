@@ -8,7 +8,6 @@ import android.location.LocationManager;
 
 import androidx.core.content.ContextCompat;
 
-import com.mapbox.mapboxsdk.camera.CameraPosition;
 import com.mapbox.mapboxsdk.geometry.LatLng;
 import com.mapbox.mapboxsdk.location.LocationComponent;
 import com.mapbox.mapboxsdk.location.LocationComponentActivationOptions;
@@ -19,7 +18,7 @@ import com.mapbox.mapboxsdk.maps.MapboxMap;
 import com.mapbox.mapboxsdk.maps.Style;
 import com.ming.androidmapbox.MapActivity;
 import com.ming.androidmapbox.R;
-import com.ming.androidmapbox.ToastUtil;
+import com.ming.androidmapbox.util.ToastUtil;
 
 public class LocationComponentActivity extends MapActivity {
     @Override

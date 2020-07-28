@@ -35,5 +35,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.ming.androidmapbox.root.StyleActivity" />
+        <activity android:name="com.ming.androidmapbox.root.UiSettingActivity" />
+        <activity android:name="com.ming.androidmapbox.root.CameraPositionActivity" />
+        <activity android:name="com.ming.androidmapbox.root.MapListenerActivity" />
+
+        <activity android:name="com.ming.androidmapbox.layers.FillLayerActivity" />
+        <activity android:name="com.ming.androidmapbox.layers.LineLayerActivity" />
+        <activity android:name="com.ming.androidmapbox.layers.SymbolLayerActivity" />
+        <activity android:name="com.ming.androidmapbox.layers.SymbolLayerIconsActivity" />
+        <activity android:name="com.ming.androidmapbox.layers.MarkerFollowingRouteActivity"/>
+        <activity android:name="com.ming.androidmapbox.layers.CircleLayerActivity"/>
+        <activity android:name="com.ming.androidmapbox.layers.CircleToIconTransitionActivity"/>
+        <activity android:name="com.ming.androidmapbox.layers.CircleLayerClusteringActivity"/>
+        <activity android:name="com.ming.androidmapbox.layers.CircleCreateHotspotsActivity"/>
     </application>
 </manifest>

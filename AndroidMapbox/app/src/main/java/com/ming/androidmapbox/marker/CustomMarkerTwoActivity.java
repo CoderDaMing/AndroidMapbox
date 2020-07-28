@@ -1,9 +1,7 @@
 package com.ming.androidmapbox.marker;
 
-import com.mapbox.mapboxsdk.geometry.LatLng;
 import com.ming.androidmapbox.MapActivity;
-import com.ming.androidmapbox.MyApplication;
-import com.ming.androidmapbox.ToastUtil;
+import com.ming.androidmapbox.util.ToastUtil;
 
 /**
  * MarkerView已过时被mapbox在高版本删除（5.1.3左右存在 ）

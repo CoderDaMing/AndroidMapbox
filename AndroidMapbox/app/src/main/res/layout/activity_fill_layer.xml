@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        mapbox:mapbox_cameraTargetLat="25.255377"
+        mapbox:mapbox_cameraTargetLng="55.3089185"
+        mapbox:mapbox_cameraZoom="13">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="60dp"
+            android:background="@android:color/darker_gray">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="绘制类型：" />
+
+            <Button
+                android:id="@+id/btn_have_hole"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="带洞" />
+
+            <Button
+                android:id="@+id/btn_not_have_hole"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="不带洞" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_use_image"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="填充图片" />
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="bottom">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:text="动态更新：" />
+
+                <Button
+                    android:id="@+id/btn_visibility"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="可见性" />
+                <Button
+                    android:id="@+id/btn_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="填充色及不透明度" />
+            </LinearLayout>
+        </HorizontalScrollView>
+    </com.mapbox.mapboxsdk.maps.MapView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/activity_map" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_AllGesturesEnabled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="启用所有手势true"
+                android:textAllCaps="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_RotateGesturesEnabled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="启用旋转手势true"
+                android:textAllCaps="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_ScrollGesturesEnabled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="启用滚动手势true"
+                android:textAllCaps="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_TiltGesturesEnabled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="启用倾斜手势true"
+                android:textAllCaps="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_ZoomGesturesEnabled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="启用缩放手势true"
+                android:textAllCaps="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_DoubleTapGesturesEnabled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="启用双击手势true"
+                android:textAllCaps="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_HorizontalScrollGesturesEnabled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="启用水平滚动手势true"
+                android:textAllCaps="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_QuickZoomGesturesEnabled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="启用快速缩放手势true"
+                android:textAllCaps="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/btn_enable_attribution"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="启用归因true"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_random_change_attribution"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="随机变化归因"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_enable_compass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="启用指南针true"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_random_change_compass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="随机变化指南针"
+            android:textAllCaps="false" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_resetNorth"
+        android:text="将地图视图重置为朝北"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

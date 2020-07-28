@@ -3,10 +3,10 @@ package com.ming.androidmapbox.symbol;
 import androidx.annotation.NonNull;
 
 import com.mapbox.mapboxsdk.geometry.LatLng;
-import com.ming.androidmapbox.LogUtils;
+import com.ming.androidmapbox.util.LogUtils;
 import com.ming.androidmapbox.MapActivity;
 import com.ming.androidmapbox.R;
-import com.ming.androidmapbox.ToastUtil;
+import com.ming.androidmapbox.util.ToastUtil;
 
 import java.io.IOException;
 

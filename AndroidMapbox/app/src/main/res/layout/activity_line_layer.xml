@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        mapbox:mapbox_cameraTargetLat="38.875"
+        mapbox:mapbox_cameraTargetLng="-77.035"
+        mapbox:mapbox_cameraZoom="13">
+
+
+        <RadioGroup
+            android:id="@+id/rg_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:checked="true"
+                android:id="@+id/rb_line_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="普通线"
+                android:textColor="@android:color/black" />
+
+            <RadioButton
+                android:id="@+id/rb_line_gradient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="渐变线"
+                android:textColor="@android:color/black" />
+
+            <RadioButton
+                android:id="@+id/rb_line_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="图片线"
+                android:textColor="@android:color/black" />
+        </RadioGroup>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="bottom">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:text="动态更新：" />
+
+                <Button
+                    android:id="@+id/btn_lineBlur"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="模糊" />
+                <Button
+                    android:id="@+id/btn_lineCap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="线帽" />
+                <Button
+                    android:id="@+id/btn_lineColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="线条的绘制颜色" />
+
+                <Button
+                    android:id="@+id/btn_lineDasharray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="行破折号" />
+
+                <Button
+                    android:id="@+id/btn_lineWidth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="行宽" />
+
+                <Button
+                    android:id="@+id/btn_lineGapWidth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="在线的实际路径之外绘制线框" />
+
+                <Button
+                    android:id="@+id/btn_lineJoin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="线连接" />
+            </LinearLayout>
+        </HorizontalScrollView>
+    </com.mapbox.mapboxsdk.maps.MapView>
+</androidx.constraintlayout.widget.ConstraintLayout>

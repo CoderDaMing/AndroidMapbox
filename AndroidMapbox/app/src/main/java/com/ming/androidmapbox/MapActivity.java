@@ -1,14 +1,14 @@
 package com.ming.androidmapbox;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
+import android.os.Bundle;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-import androidx.core.location.LocationManagerCompat;
-
-import android.Manifest;
-import android.content.pm.PackageManager;
-import android.os.Bundle;
 
 import com.mapbox.mapboxsdk.Mapbox;
 import com.mapbox.mapboxsdk.maps.MapView;
@@ -16,7 +16,19 @@ import com.mapbox.mapboxsdk.maps.MapboxMap;
 import com.mapbox.mapboxsdk.maps.OnMapReadyCallback;
 import com.mapbox.mapboxsdk.maps.Style;
 
-public class MapActivity extends AppCompatActivity {
+/**
+ * Mapbox样式的根级别属性指定地图的图层，图块源和其他资源，以及在其他地方未指定时初始摄像机位置的默认值。
+ * <p>
+ * {
+ * "version": 8,
+ * "name": "Mapbox Streets",
+ * "sprite": "mapbox://sprites/mapbox/streets-v8",
+ * "glyphs": "mapbox://fonts/mapbox/{fontstack}/{range}.pbf",
+ * "sources": {...},
+ * "layers": [...]
+ * }
+ */
+public abstract class MapActivity extends AppCompatActivity {
     public MapView mapView;
     public MapboxMap mapboxMap;
     public Style style;
@@ -30,10 +42,19 @@ public class MapActivity extends AppCompatActivity {
 
         mapView = findViewById(R.id.mapView);
         mapView.onCreate(savedInstanceState);
+        mapView.addOnDidFailLoadingMapListener(new MapView.OnDidFailLoadingMapListener() {
+            @Override
+            public void onDidFailLoadingMap(String errorMessage) {
+                Toast.makeText(MapActivity.this, "无法加载样式或设置了无效的样式URL，则地图视图将变为空白。", Toast.LENGTH_SHORT).show();
+            }
+        });
         mapView.getMapAsync(new OnMapReadyCallback() {
             @Override
             public void onMapReady(@NonNull MapboxMap mapboxMap) {
+                //是否显示地图调试信息
+                mapboxMap.setDebugActive(false);
                 MapActivity.this.mapboxMap = mapboxMap;
+                //加载新的地图样式
                 mapboxMap.setStyle(Style.MAPBOX_STREETS, new Style.OnStyleLoaded() {
                     @Override
                     public void onStyleLoaded(@NonNull Style style) {
