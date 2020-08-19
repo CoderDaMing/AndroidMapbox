@@ -223,6 +223,7 @@ public class LineLayerActivity extends AppCompatActivity implements RadioGroup.O
 
     @Override
     public void onCheckedChanged(RadioGroup group, int checkedId) {
+        mBtnLineDasharray.setVisibility(checkedId == R.id.rb_line_normal ? View.VISIBLE : View.GONE);
         initMap();
     }
 
