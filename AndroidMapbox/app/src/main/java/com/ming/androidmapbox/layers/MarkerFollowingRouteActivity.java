@@ -259,14 +259,7 @@ public class MarkerFollowingRouteActivity extends AppCompatActivity implements V
                     markerIconAnimator.setInterpolator(new LinearInterpolator());
 
                     markerIconAnimator.addUpdateListener(animatorUpdateListener);
-                    markerIconAnimator.addListener(new AnimatorListenerAdapter() {
-                        @Override
-                        public void onAnimationEnd(Animator animation) {
-                            super.onAnimationEnd(animation);
-                            //复位
-                            resetParams();
-                        }
-                    });
+                   
                     markerIconAnimator.start();
 
                     // Keeping the current point count we are on.
