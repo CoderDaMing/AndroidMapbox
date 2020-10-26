@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/string_concat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="concat" />
+
+    <Button
+        android:id="@+id/string_upcase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="upcase" />
+
+    <Button
+        android:id="@+id/string_downcase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="downcase" />
+
+    <Button
+        android:id="@+id/string_is_supported_script"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="is-supported-script" />
+
+    <Button
+        android:id="@+id/string_resolved_locale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="resolved-locale" />
+
+    <TextView
+        android:id="@+id/tv_ex_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:id="@+id/tv_ex_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/mapboxGray"
+        android:layout_marginTop="15dp" />
+</LinearLayout>

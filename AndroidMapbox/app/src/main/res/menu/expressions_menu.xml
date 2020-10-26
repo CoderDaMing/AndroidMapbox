@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/ex_types"
+        android:title="Types" />
+    <item
+        android:id="@+id/ex_feature_data"
+        android:title="Feature data" />
+    <item
+        android:id="@+id/ex_look_up"
+        android:title="Lookup" />
+    <item
+        android:id="@+id/ex_decision"
+        android:title="Decision" />
+    <item
+        android:id="@+id/ex_ramps_scales_curves"
+        android:title="Ramps, scales, curves" />
+    <item
+        android:id="@+id/ex_string"
+        android:title="String" />
+    <item
+        android:id="@+id/ex_variable_binding"
+        android:title="Variable binding" />
+    <item
+        android:id="@+id/ex_color"
+        android:title="Color" />
+    <item
+        android:id="@+id/ex_math"
+        android:title="Math" />
+    <item
+        android:id="@+id/ex_zoom"
+        android:title="Zoom" />
+    <item
+        android:id="@+id/ex_heatmap"
+        android:title="Heatmap" />
+</menu>

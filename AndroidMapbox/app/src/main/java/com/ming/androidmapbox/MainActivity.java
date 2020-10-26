@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.mapbox.mapboxsdk.camera.CameraPosition;
+import com.ming.androidmapbox.expression.ExpressionActivity;
 import com.ming.androidmapbox.layers.CircleCreateHotspotsActivity;
 import com.ming.androidmapbox.layers.CircleLayerActivity;
 import com.ming.androidmapbox.layers.CircleLayerClusteringActivity;
@@ -23,6 +24,7 @@ import com.ming.androidmapbox.layers.CircleToIconTransitionActivity;
 import com.ming.androidmapbox.layers.FillLayerActivity;
 import com.ming.androidmapbox.layers.LineLayerActivity;
 import com.ming.androidmapbox.layers.MarkerFollowingRouteActivity;
+import com.ming.androidmapbox.layers.MultipleHeatmapStylingActivity;
 import com.ming.androidmapbox.layers.SymbolLayerActivity;
 import com.ming.androidmapbox.layers.SymbolLayerIconsActivity;
 import com.ming.androidmapbox.marker.CustomMarkerOneActivity;
@@ -102,6 +104,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         mActivityDataList.add(new ActivityData("MarkerFollowingRouteActivity", MarkerFollowingRouteActivity.class.getName()));
         mActivityDataList.add(new ActivityData("SymbolLayerActivity", SymbolLayerActivity.class.getName()));
         mActivityDataList.add(new ActivityData("SymbolLayerIconsActivity", SymbolLayerIconsActivity.class.getName()));
+        mActivityDataList.add(new ActivityData("MultipleHeatmapStylingActivity", MultipleHeatmapStylingActivity.class.getName()));
+        mActivityDataList.add(new ActivityData("*************expression包下*************", ""));
+        mActivityDataList.add(new ActivityData("ExpressionActivity", ExpressionActivity.class.getName()));
     }
 
     @Override

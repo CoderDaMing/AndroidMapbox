@@ -14,20 +14,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MapActivity"/>
-        <activity android:name=".marker.CustomMarkerOneActivity"/>
-        <activity android:name=".marker.CustomMarkerTwoActivity"/>
-        <activity android:name=".marker.CustomMarkerThreeActivity"/>
-        <activity android:name=".marker.InfoWindowAdapterActivity"/>
-        <activity android:name=".symbol.GeoActivity"/>
-        <activity android:name=".symbol.ReverseGeoActivity"/>
-        <activity android:name=".symbol.SymbolLayerOneActivity"/>
-        <activity android:name=".symbol.SymbolLayerTwoActivity"/>
-        <activity android:name=".symbol.ClusterActivity"/>
-        <activity android:name=".symbol.InfoWindowActivity"/>
-        <activity android:name=".symbol.SnapshotActivity"/>
-        <activity android:name=".symbol.HideMapNameActivity"/>
-        <activity android:name=".symbol.LocationComponentActivity"/>
+        <activity android:name=".expression.ExpressionMapActivity"></activity>
+        <activity android:name=".MapActivity" />
+        <activity android:name=".marker.CustomMarkerOneActivity" />
+        <activity android:name=".marker.CustomMarkerTwoActivity" />
+        <activity android:name=".marker.CustomMarkerThreeActivity" />
+        <activity android:name=".marker.InfoWindowAdapterActivity" />
+        <activity android:name=".symbol.GeoActivity" />
+        <activity android:name=".symbol.ReverseGeoActivity" />
+        <activity android:name=".symbol.SymbolLayerOneActivity" />
+        <activity android:name=".symbol.SymbolLayerTwoActivity" />
+        <activity android:name=".symbol.ClusterActivity" />
+        <activity android:name=".symbol.InfoWindowActivity" />
+        <activity android:name=".symbol.SnapshotActivity" />
+        <activity android:name=".symbol.HideMapNameActivity" />
+        <activity android:name=".symbol.LocationComponentActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,19 +36,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.ming.androidmapbox.root.StyleActivity" />
-        <activity android:name="com.ming.androidmapbox.root.UiSettingActivity" />
-        <activity android:name="com.ming.androidmapbox.root.CameraPositionActivity" />
-        <activity android:name="com.ming.androidmapbox.root.MapListenerActivity" />
-
-        <activity android:name="com.ming.androidmapbox.layers.FillLayerActivity" />
-        <activity android:name="com.ming.androidmapbox.layers.LineLayerActivity" />
-        <activity android:name="com.ming.androidmapbox.layers.SymbolLayerActivity" />
-        <activity android:name="com.ming.androidmapbox.layers.SymbolLayerIconsActivity" />
-        <activity android:name="com.ming.androidmapbox.layers.MarkerFollowingRouteActivity"/>
-        <activity android:name="com.ming.androidmapbox.layers.CircleLayerActivity"/>
-        <activity android:name="com.ming.androidmapbox.layers.CircleToIconTransitionActivity"/>
-        <activity android:name="com.ming.androidmapbox.layers.CircleLayerClusteringActivity"/>
-        <activity android:name="com.ming.androidmapbox.layers.CircleCreateHotspotsActivity"/>
+        <activity android:name=".root.StyleActivity" />
+        <activity android:name=".root.UiSettingActivity" />
+        <activity android:name=".root.CameraPositionActivity" />
+        <activity android:name=".root.MapListenerActivity" />
+        <activity android:name=".layers.FillLayerActivity" />
+        <activity android:name=".layers.LineLayerActivity" />
+        <activity android:name=".layers.SymbolLayerActivity" />
+        <activity android:name=".layers.SymbolLayerIconsActivity" />
+        <activity android:name=".layers.MarkerFollowingRouteActivity" />
+        <activity android:name=".layers.CircleLayerActivity" />
+        <activity android:name=".layers.CircleToIconTransitionActivity" />
+        <activity android:name=".layers.CircleLayerClusteringActivity" />
+        <activity android:name=".layers.CircleCreateHotspotsActivity" />
+        <activity android:name=".layers.MultipleHeatmapStylingActivity" />
+        <activity android:name=".expression.ExpressionActivity" />
     </application>
+
 </manifest>

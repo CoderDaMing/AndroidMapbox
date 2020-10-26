@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".expression.ExFeatureDataFragment">
+
+    <Button
+        android:id="@+id/look_up_at"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="at" />
+
+    <Button
+        android:id="@+id/look_up_get"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="get" />
+
+    <Button
+        android:id="@+id/look_up_has"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="has" />
+
+    <Button
+        android:id="@+id/look_up_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="in" />
+
+    <Button
+        android:id="@+id/look_up_length"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="length" />
+
+
+    <TextView
+        android:id="@+id/tv_ex_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:id="@+id/tv_ex_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/mapboxGray"
+        android:layout_marginTop="15dp" />
+</LinearLayout>
