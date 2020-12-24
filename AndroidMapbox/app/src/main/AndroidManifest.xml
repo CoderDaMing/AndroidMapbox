@@ -2,10 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ming.androidmapbox">
 
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -14,7 +10,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".expression.ExpressionMapActivity"></activity>
+        <activity android:name=".titlesource.RasterTileSourceActivity"></activity>
+        <activity android:name=".titlesource.AddWmsSourceActivity" />
+        <activity android:name=".titlesource.VectorSourceActivity" />
+        <activity android:name=".expression.ExpressionMapActivity" />
         <activity android:name=".MapActivity" />
         <activity android:name=".marker.CustomMarkerOneActivity" />
         <activity android:name=".marker.CustomMarkerTwoActivity" />
@@ -52,5 +51,9 @@
         <activity android:name=".layers.MultipleHeatmapStylingActivity" />
         <activity android:name=".expression.ExpressionActivity" />
     </application>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
 </manifest>

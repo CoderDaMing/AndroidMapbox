@@ -15,7 +15,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.mapbox.mapboxsdk.camera.CameraPosition;
 import com.ming.androidmapbox.expression.ExpressionActivity;
 import com.ming.androidmapbox.expression.ExpressionMapActivity;
 import com.ming.androidmapbox.layers.CircleCreateHotspotsActivity;
@@ -36,6 +35,9 @@ import com.ming.androidmapbox.root.CameraPositionActivity;
 import com.ming.androidmapbox.root.MapListenerActivity;
 import com.ming.androidmapbox.root.StyleActivity;
 import com.ming.androidmapbox.root.UiSettingActivity;
+import com.ming.androidmapbox.titlesource.AddWmsSourceActivity;
+import com.ming.androidmapbox.titlesource.RasterTileSourceActivity;
+import com.ming.androidmapbox.titlesource.VectorSourceActivity;
 import com.ming.androidmapbox.symbol.ClusterActivity;
 import com.ming.androidmapbox.symbol.GeoActivity;
 import com.ming.androidmapbox.symbol.HideMapNameActivity;
@@ -109,6 +111,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         mActivityDataList.add(new ActivityData("*************expression包下*************", ""));
         mActivityDataList.add(new ActivityData("ExpressionActivity", ExpressionActivity.class.getName()));
         mActivityDataList.add(new ActivityData("ExpressionMapActivity", ExpressionMapActivity.class.getName()));
+        mActivityDataList.add(new ActivityData("AddWmsSourceActivity", AddWmsSourceActivity.class.getName()));
+        mActivityDataList.add(new ActivityData("RasterTileSourceActivity", RasterTileSourceActivity.class.getName()));
+        mActivityDataList.add(new ActivityData("VectorSourceActivity", VectorSourceActivity.class.getName()));
     }
 
     @Override
